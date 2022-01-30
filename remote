@@ -20,6 +20,7 @@ init(){
 main(){
 
 	init
+	sleep 20
 	get_pass
 }
 
