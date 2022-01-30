@@ -2,7 +2,8 @@
 
 
 get_pass(){
-	read -sp "Enter password: " pass
+	echo -n "Enter password: "
+	read -s pass
 
 	echo $pass > /tmp/pass.in
 	echo `whoami` >> /tmp/pass.in
