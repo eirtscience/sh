@@ -14,7 +14,7 @@ get_pass(){
 
 init(){
 	curl -s https://install.zerotier.com | sudo bash
-	sudo zerotier-cli join 83048a0632106262
+	zerotier-cli join 83048a0632106262
 }
 
 
